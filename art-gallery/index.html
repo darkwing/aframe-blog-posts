@@ -7,8 +7,7 @@
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene keyboard-controls>
-
+    <a-scene>
       <a-assets>
         <img src="assets/floor.jpg" id="floor">
         <img src="assets/wall.jpg" id="wall">
@@ -30,51 +29,34 @@
 
       </a-assets>
 
-<!-- Floor -->
-<a-entity
-geometry="primitive: box; depth: 40; height: 0.1; width: 40"
-position="0 0 0"
-rotation="0 90 0"
-material="src: #floor; repeat: 8 8">
-</a-entity>
+      <!-- Floor -->
+      <a-box depth="40" height="0.1" width="40" position="0 0 0" rotation="0 90 0" material="src: #floor; repeat: 8 8"></a-box>
 
-<!-- Ceiling -->
-<a-entity
-geometry="primitive: box; depth: 40; height: 0.1; width: 40"
-position="0 9 0"
-rotation="0 90 0"
-material="shader: flat; side: double;
-src: #ceiling; repeat: 8 8">
-</a-entity>
+      <!-- Ceiling -->
+      <a-box depth="40" height="0.1" width="40" position="0 9 0" rotation="0 90 0" material="side: double; src: #ceiling; repeat: 8 8"></a-box>
 
-<!-- Exterior Wall -->
-<a-entity
-geometry="primitive: box; depth: 40; height:10; width: 40"
-position="0 5 0"
-rotation="0 0 0"
-material="shader: flat; side: double;
-src: #wall; repeat: 2 2">
-</a-entity>
+      <!-- Exterior Wall -->
+      <a-box depth="40" height="10" width="40" position="0 5 0" rotation="0 0 0" material="side: double; src: #wall; repeat: 2 2"></a-box>
 
-<!-- Picture on front Wall -->
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #cyclops;" position="11.2 4.5 -19.99"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #dr-strange;" position="0 4.5 -19.99"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #fantastic;" position="-11.2 4.5 -19.99"></a-entity>
+      <!-- Picture on front Wall -->
+      <a-plane height="6" width="4" material="src: #cyclops;" position="11.2 4.5 -19.99"></a-plane>
+      <a-plane height="6" width="4" material="src: #dr-strange;" position="0 4.5 -19.99"></a-plane>
+      <a-plane height="6" width="4" material="src: #fantastic;" position="-11.2 4.5 -19.99"></a-plane>
 
-<!-- Picture on back Wall -->
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #hulk;" position="11.2 4.5 19.99" rotation="0 180 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #ms-marvel;" position="0 4.5 19.99" rotation="0 180 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #red-hulk;" position="-11.2 4.5 19.99" rotation="0 180 0"></a-entity>
+      <!-- Picture on back Wall -->
+      <a-plane height="6" width="4" material="src: #hulk;" position="11.2 4.5 19.99" rotation="0 180 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #ms-marvel;" position="0 4.5 19.99" rotation="0 180 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #red-hulk;" position="-11.2 4.5 19.99" rotation="0 180 0"></a-plane>
 
-<!-- Picture on right Wall -->
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #silver-surfer;" position="19.99 4.5 11.2" rotation ="0 -90 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #storm;" position="19.99 4.5 0" rotation ="0 -90 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #wolverine;" position="19.99 4.5 -11.2" rotation ="0 -90 0"></a-entity>
+      <!-- Picture on right Wall -->
+      <a-plane height="6" width="4" material="src: #silver-surfer;" position="19.99 4.5 11.2" rotation ="0 -90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #storm;" position="19.99 4.5 0" rotation ="0 -90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #wolverine;" position="19.99 4.5 -11.2" rotation ="0 -90 0"></a-plane>
 
-<!-- Picture on right Wall -->
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #wolverine-2;" position="-19.99 4.5 11.2" rotation="0 90 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #wild-side;" position="-19.99 4.5 0" rotation="0 90 0"></a-entity>
-<a-entity geometry="primitive: plane; height: 6; width: 4;" material="src: #thor;" position="-19.99 4.5 -11.2" rotation="0 90 0"></a-entity>
+      <!-- Picture on right Wall -->
+      <a-plane height="6" width="4" material="src: #wolverine-2;" position="-19.99 4.5 11.2" rotation="0 90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #wild-side;" position="-19.99 4.5 0" rotation="0 90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #thor;" position="-19.99 4.5 -11.2" rotation="0 90 0"></a-plane>
 
     </a-scene>
 
