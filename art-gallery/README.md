@@ -15,17 +15,17 @@ Let's create our first practical A-Frame environment: an art gallery that we ca
 
 ## Getting Started
 
-A-Frame provides a <a href="https://github.com/aframevr/aframe-boilerplate">boilerplate</a> for creating creating WebVR scenes.  Simply download the boilerplate and execute the following to get started:
+A-Frame provides a [boilerplate](https://github.com/aframevr/aframe-boilerplate) for creating creating WebVR scenes.  Simply download the boilerplate and execute the following to get started:
 
 [npm install code]
 
-You'll see your browser open a new tab with a sample A-Frame scene.  Notice you can click and drag the scene to change the perspective; you can also use your keyboard's WASD keys to get closer or further away from the sample scene.  Since we're looking to create our art gallery, however, we can delete all of the shapes from the `index.html` file and simply leave the `&lt;a-scene&gt;` element.
+You'll see your browser open a new tab with a sample A-Frame scene.  Notice you can click and drag the scene to change the perspective; you can also use your keyboard's WASD keys to get closer or further away from the sample scene.  Since we're looking to create our art gallery, however, we can delete all of the shapes from the `index.html` file and simply leave the `a-scene` element.
 
-[TODO:  Add some text about `&lt;a-scene&gt;` and how it wraps everything]
+[TODO:  Add some text about `a-scene` and how it wraps everything]
 
 ## Creating the Room
 
-The first step in developing the art gallery is creating the room: 4 walls, a floor, and a ceiling.  We'll use the `&lt;a-box&gt;` element to do just that:
+The first step in developing the art gallery is creating the room: 4 walls, a floor, and a ceiling.  We'll use the `a-box` element to do just that:
 
 ```html
 html
@@ -43,13 +43,13 @@ We've also added a specific color to each entity within the room -- that will he
 
 ## Room Textures and Images
 
-Once we're content with the way our room is pieced together, we can use images to make the floor, walls, and ceiling look a bit more realistic.  Once we have the image textures we'd like to use, we'll add them as children `&lt;img&gt;` elements to one `&lt;a-assets&gt;` element:
+Once we're content with the way our room is pieced together, we can use images to make the floor, walls, and ceiling look a bit more realistic.  Once we have the image textures we'd like to use, we'll add them as children `img` elements to one `a-assets` element:
 
 ```html
 html
 ```
 
-The role of the `&lt;a-assets&gt;` tag is to preload all media (images, audio, video) before first rendering the scene -- this provides for a more elegant rendering experience.  Each `&lt;img&gt;` should be given an ID for which it can be referenced by when we'd like to use it.
+The role of the `a-assets` tag is to preload all media (images, audio, video) before first rendering the scene -- this provides for a more elegant rendering experience.  Each `img` should be given an ID for which it can be referenced by when we'd like to use it.
 
 To add our images as textures to the walls, ceiling, and floor, all we need to do is add a `src` key and value to the `material` attribute of each box:
 
@@ -63,13 +63,13 @@ We also added a `repeat` property which directs the image to repeat every `{x} 
 
 ## Adding Art
 
-A gallery wouldn't be complete without art so now we need to add some imagery to the walls.  Once we have images we'd like to use, we'll need to add them as `&lt;img&gt;` elements within `&lt;a-assets&gt;`, giving each a unique `id`, just as we did the wall textures:
+A gallery wouldn't be complete without art so now we need to add some imagery to the walls.  Once we have images we'd like to use, we'll need to add them as `img` elements within `a-assets`, giving each a unique `id`, just as we did the wall textures:
 
 ```html
 html
 ```
 
-We'll use a series of `&lt;a-plane&gt;` elements to for the art.  Each `&lt;a-plane&gt;` element will use the `material` attribute's `src` key and value to set the image as the plane's texture.  Here's one simple example of placing an image on the wall directly in front of us:
+We'll use a series of `a-plane` elements to for the art.  Each `a-plane` element will use the `material` attribute's `src` key and value to set the image as the plane's texture.  Here's one simple example of placing an image on the wall directly in front of us:
 
 ```html
 html
@@ -78,7 +78,7 @@ html
 Let's quickly examine the element above:
 
 - We set a `width` and `height` for the plane (the image will stretch if not [WHAT TERM IS IT?]
-- We set the `material` attribute's `src` value to the `id` of the desired image within `&lt;a-assets&gt;`
+- We set the `material` attribute's `src` value to the `id` of the desired image within `a-assets`
 - We position the plane up against the wall via the `position` property using `x y z` format:
 
 - `x` is `0` to position the image straight ahead of us
