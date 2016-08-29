@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Art Gallery - A-Frame</title>
+    <meta name="description" content="Art Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img src="assets/floor.jpg" id="floor">
+        <img src="assets/wall.jpg" id="wall">
+        <img src="assets/ceiling.jpg" id="ceiling">
+
+        <!-- https://squadcards.wordpress.com/ -->
+        <img src="assets/cyclops.png" id="cyclops">
+        <img src="assets/dr-strange.png" id="dr-strange">
+        <img src="assets/fantastic.png" id="fantastic">
+        <img src="assets/hulk.png" id="hulk">
+        <img src="assets/ms-marvel.jpg" id="ms-marvel">
+        <img src="assets/red-hulk.png" id="red-hulk">
+        <img src="assets/silver-surfer.png" id="silver-surfer">
+        <img src="assets/storm.png" id="storm">
+        <img src="assets/wolverine.png" id="wolverine">
+        <img src="assets/wolverine-2.png" id="wolverine-2">
+        <img src="assets/wild-side.png" id="wild-side">
+        <img src="assets/thor.png" id="thor">
+
+      </a-assets>
+
+      <!-- Floor -->
+      <a-box depth="40" height="0.1" width="40" position="0 0 0" rotation="0 90 0" material="src: #floor; repeat: 8 8"></a-box>
+
+      <!-- Ceiling -->
+      <a-box depth="40" height="0.1" width="40" position="0 9 0" rotation="0 90 0" material="side: double; src: #ceiling; repeat: 8 8"></a-box>
+
+      <!-- Exterior Wall -->
+      <a-box depth="40" height="10" width="40" position="0 5 0" rotation="0 0 0" material="side: double; src: #wall; repeat: 2 2"></a-box>
+
+      <!-- Picture on front Wall -->
+      <a-plane height="6" width="4" material="src: #cyclops;" position="11.2 4.5 -19.99"></a-plane>
+      <a-plane height="6" width="4" material="src: #dr-strange;" position="0 4.5 -19.99"></a-plane>
+      <a-plane height="6" width="4" material="src: #fantastic;" position="-11.2 4.5 -19.99"></a-plane>
+
+      <!-- Picture on back Wall -->
+      <a-plane height="6" width="4" material="src: #hulk;" position="11.2 4.5 19.99" rotation="0 180 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #ms-marvel;" position="0 4.5 19.99" rotation="0 180 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #red-hulk;" position="-11.2 4.5 19.99" rotation="0 180 0"></a-plane>
+
+      <!-- Picture on right Wall -->
+      <a-plane height="6" width="4" material="src: #silver-surfer;" position="19.99 4.5 11.2" rotation ="0 -90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #storm;" position="19.99 4.5 0" rotation ="0 -90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #wolverine;" position="19.99 4.5 -11.2" rotation ="0 -90 0"></a-plane>
+
+      <!-- Picture on right Wall -->
+      <a-plane height="6" width="4" material="src: #wolverine-2;" position="-19.99 4.5 11.2" rotation="0 90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #wild-side;" position="-19.99 4.5 0" rotation="0 90 0"></a-plane>
+      <a-plane height="6" width="4" material="src: #thor;" position="-19.99 4.5 -11.2" rotation="0 90 0"></a-plane>
+
+    </a-scene>
+
+  </body>
+</html>
