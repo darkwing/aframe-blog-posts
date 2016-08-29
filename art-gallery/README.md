@@ -1,10 +1,10 @@
 ## ToDo
-- Finalize dimensions, then come back to this post and ensure they're still correct
+- Ensure dimensions are correct in text
+- Add code to the post
+- Add CodePen pens to post?
 - Take screenshots
 
-[intro: some stuff about VR growing in popularity, there being a WebVR API, etc.]
-
-A-Frame is an amazing Mozilla-led project aimed at providing web developers an easy way to create VR experiences that can be enjoyed both in the browser and VR devices.  A-Frame provides an easy to use, HTML-based API for creating shapes, animations, and interaction.  You can create a rich, interactive environment without writing a single line of JavaScript!
+A-Frame is an amazing Mozilla-led project aimed at providing web developers an easy way to create WebVR experiences that can be enjoyed both in the browser and VR devices.  A-Frame provides an easy to use, HTML-based API for creating shapes, animations, and interaction.  You can create a rich, interactive environment without writing a single line of JavaScript!
 
 Let's create our first practical A-Frame environment: an art gallery that we can walk around!  This simple scene will help us learn the following:
 
@@ -19,9 +19,7 @@ A-Frame provides a [boilerplate](https://github.com/aframevr/aframe-boilerplate
 
 [npm install code]
 
-You'll see your browser open a new tab with a sample A-Frame scene.  Notice you can click and drag the scene to change the perspective; you can also use your keyboard's WASD keys to get closer or further away from the sample scene.  Since we're looking to create our art gallery, however, we can delete all of the shapes from the `index.html` file and simply leave the `<a-scene>` element.
-
-[TODO:  Add some text about `<a-scene>` and how it wraps everything]
+You'll see your browser open a new tab with a sample A-Frame scene.  Notice you can click and drag the scene to change the perspective; you can also use your keyboard's WASD keys to get closer or further away from the sample scene.  Since we're looking to create our art gallery, however, we can delete all of the shapes from the `index.html` file and simply leave the `<a-scene>` element, which serves as a wrapper for all A-Frame scenes.
 
 ## Creating the Room
 
@@ -34,12 +32,14 @@ html
 Dimensions are always measured in meters, so our room is `40` meters wide, `40` meters deep, and `10` meters high.  Let's have a look at each pieces of the code above:
 
 
-- The exterior walls [FINISH]
+- The exterior walls are set at `0 0 0 `, meaning it will be placed around us, leaving `20` meters to each side of us
 - The ceiling's position is `0 9 0`, which elevates it to the top of the exterior walls
 - The floor's position is `0 0 0`, which keeps it below our viewpoint
 
 
 We've also added a specific color to each entity within the room -- that will help us get a feel for the dimensions and where each piece of the room starts and ends, i.e. no gaps between the walls and the floor and ceiling.  Voila!  We've created our first WebVR room with just a few HTML elements!
+
+[img of walls without textures]
 
 ## Room Textures and Images
 
@@ -99,6 +99,8 @@ Placing images on the left, right, and back wall will require us to introduce a 
 html
 ```
 
-Now when you move around the room using the WASD keys and your mouse, you'll see images on all sides of the room!  If you own an HTC Vive, you can even walk around the gallery yourself!
+Now when you move around the room using the WASD keys and your mouse, you'll see images on all sides of the room!  If you own a HTC Vive, you can even walk around the gallery yourself!
 
-[closing]
+[img of wall art]
+
+A-Frame disarms the impostor syndrome that comes with learning a bleeding edge API, which WebVR certainly is, by providing developers an HTML-based API for creating VR environments.  In our next post, we'll build off of this basic environment by adding sound, animation, events, and more!
