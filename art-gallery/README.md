@@ -77,7 +77,7 @@ html
 
 Let's quickly examine the element above:
 
-- We set a `width` and `height` for the plane (the image will stretch if not [WHAT TERM IS IT?]
+- We set a `width` and `height` for the plane (the image will stretch if not "power of two", example: 1024x1024, 2048x2048, etc.)
 - We set the `material` attribute's `src` value to the `id` of the desired image within `<a-assets>`
 - We position the plane up against the wall via the `position` property using `x y z` format:
 
