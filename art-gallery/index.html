@@ -5,6 +5,7 @@
     <title>Art Gallery - A-Frame</title>
     <meta name="description" content="Art Gallery - A-Frame">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls@0.1.0/dist/aframe-teleport-controls.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -28,6 +29,19 @@
         <img src="assets/thor.png" id="thor">
 
       </a-assets>
+
+      <a-entity id="left-hand"
+  brush
+  paint-controls="hand: left"
+  ui
+  teleport-controls>
+</a-entity>
+<a-entity id="right-hand"
+  brush
+  paint-controls="hand: right"
+  ui
+  teleport-controls>
+</a-entity>
 
       <!-- Floor -->
       <a-box depth="40" height="0.1" width="40" position="0 0 0" rotation="0 90 0" material="src: #floor; repeat: 8 8"></a-box>
